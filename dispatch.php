@@ -100,9 +100,12 @@ if(isset($_POST["btnDispatch"]))
 	}
 	
 	$conn->close();
-}
 ?>
-
+<script type = "text/javascript"> window.location = "./logcall.php"; </script>
+<?php
+}
+require_once'nav.php';
+?>
 <!-- display the incident information passed from logcall.php -->
 <form name = "form1" method = "post" action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?> ">
 <table class = "ContentStyle">
@@ -155,7 +158,7 @@ if(isset($_POST["btnDispatch"]))
 	</tr>
 
 <!-- After dispatching, redirect to logcall.php -->
-<!-- <script type = "text/javascript"> window.location = "./logcall.php"; </script> -->
+
 
 
 </table>
